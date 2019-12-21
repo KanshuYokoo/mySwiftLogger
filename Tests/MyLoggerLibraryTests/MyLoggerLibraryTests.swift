@@ -6,7 +6,11 @@ final class MyLoggerLibraryTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(MyLoggerLibrary().text, "Hello, World!")
+        if #available(iOS 10.0, *) {
+            Logger.log()
+        } else {
+            // Fallback on earlier versions
+        }
     }
 
     static var allTests = [
