@@ -13,3 +13,4 @@ class Logger {
         os_log("%{public}@", type:type, formatMessage)
     }
 }
+
